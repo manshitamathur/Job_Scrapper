@@ -1,0 +1,93 @@
+body {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: "Montserrat", "Poppins", sans-serif;
+}
+.container-fluid {
+  height: 100vh;
+}
+.col-left {
+  padding: 30px;
+  background: linear-gradient(
+    46.86deg,
+    #5e17ea 31.72%,
+    rgba(94, 23, 234, 0) 144.21%
+  );
+  height: 100vh;
+}
+.col-left .logo {
+  height: 80px;
+  width: 80px;
+}
+.col-left .body .main-img {
+  height: 37vw;
+  width: 38vw;
+  margin-left: 100px;
+}
+.body .row .col-mini .num {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 51px;
+  color: #ffffff;
+}
+.body .row .col-mini .text {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 27px;
+  color: #ffffff;
+}
+.col-right {
+  padding: 40px;
+}
+.col-right .heading {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 58px;
+  line-height: 87px;
+  color: #5e17ea;
+}
+.col-right .no-outline {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  background-color: #fff;
+  height: 70px;
+  width: 350px;
+}
+.form-box-1 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.form-box-1 input[type="checkbox"] {
+  display: none;
+}
+.form-box-1 input[type="radio"] {
+  height: 15px;
+  width: 15px;
+  margin-right: 10px;
+  color: #5e17ea;
+}
+.form-box-1 span {
+  font-size: 18px;
+}
+.col-right .btn-back {
+    padding: 15px 10px;
+  background: #efc14b;
+  box-shadow: 4px 5px 9px rgba(0, 0, 0, 0.31);
+  border-radius: 69px;
+  width: 200px;
+}
+
+@media screen and (max-width:720px) {
+    .col-left{
+        display: none;
+    }
+}

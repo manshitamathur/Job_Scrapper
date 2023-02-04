@@ -1,0 +1,68 @@
+body {
+  background-color: #FFF5EE;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", "Poppins", "Roboto", sans-serif;
+}
+.upper-text {
+  padding-top: 70px;
+}
+.upper-text h2 {
+  width: 467px;
+  height: 63px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 63px;
+  text-align: center;
+  color: #000000;
+}
+.upper-text span {
+  width: 314px;
+  height: 26px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 26px;
+  color: #6d6d6d;
+}
+.table-div {
+  padding-top: 40px;
+}
+.table-custom {
+  border: 10px solid #5e17ea !important;font-family: Montserrat;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 28px;
+  color: #111;
+  height: 200vh;
+}
+.table-heading tr th {
+  background: #5e17ea;
+  color: #fff;
+}
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: rgb(92, 38, 218);
+  color: #fff;
+  border-radius: 50px;
+  border-color: lavender;
+  text-align: center;
+  box-shadow: 2px 2px 3px #999;
+}
+
+.my-float {
+  margin-top: 22px;
+  color: #fff;
+}
+
+.table-custom tr:hover{
+    color: #fff;
+    background: #5e17ea;
+}

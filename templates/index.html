@@ -1,0 +1,103 @@
+{%load static%}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Search Results </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./style.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <link rel="stylesheet" href="{% static 'style1.css'%}" />
+</head>
+<body>
+    <div class="container">
+      <div class="upper-text">
+        <h2>Apply for required job</h2>
+        <span>Job Scrapper</span>
+      </div>
+      <div class="table-div">
+        <div class="table-responsive">
+            <table class="table table-custom" style="table-layout: fixed">
+                <thead class="thead-primary table-heading">
+                    <tr>
+                        <th>Title</th>
+                        <th>Company</th>
+                        <th>Location</th>
+                        <th>Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if error %}
+                    <div class="alert alert-danger" role="alert">
+                        No Jobs found!! Try again
+                    </div>
+                    {% endif %} {% for i in data %}
+
+                    <tr style="overflow-wrap:break-word">
+
+                        <td><b>{{i.title}}</b></td>
+                        <td><b>{{i.company}}</b></td>
+                        <td><b>{{i.location}}</b></td>
+
+                        <td><a href={{i.link}} target="_blank" class="btn btn-primary">Apply Here</a></td>
+                    </tr>
+                    {% endfor %}
+                    <tr>
+                        <!-- <td colspan="3" style="font-size: large;text-align: right;font-family: Arial, Helvetica, sans-serif;"><u>You can download the Results by clicking here-></u></td>  
+                         <form action="{%url 'download'  %}" method="POST"> -->
+                        {%csrf_token%}
+                        <!-- <td ><button type="submit" class="btn btn-primary"  id="download" name="download"  >Download Results</button></td> -->
+                        <!-- <a style="padding:10px;display:block;" href="http://androidcss.com/css/css3-floating-button-tutorial/" target="_blank">Click here for complete tutorial</a> -->
+
+                        <!-- Code begins here -->
+
+                        <a href="{%url 'download'  %}" class="float">
+                            <i class="fas fa-download my-float"></i>
+                        </a>
+                        </form>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+      </div>
+
+    <script src="{% static ' js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+
+
+</body>
+
+</html>
